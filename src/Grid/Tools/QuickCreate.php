@@ -7,6 +7,7 @@ use Encore\Admin\Form\Field;
 use Encore\Admin\Form\Field\MultipleSelect;
 use Encore\Admin\Form\Field\Select;
 use Encore\Admin\Form\Field\Text;
+use Encore\Admin\Form\Field\Hidden;
 use Encore\Admin\Grid;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Support\Collection;
@@ -37,6 +38,21 @@ class QuickCreate implements Renderable
     protected function formatPlaceholder($placeholder)
     {
         return array_filter((array) $placeholder);
+    }
+
+    /**
+     * @param string $column
+     * @param string $placeholder
+     *
+     * @return Text
+     */
+    public function hidden($column, $arguments = [])
+    {
+        // $field = new Text($column, $this->formatPlaceholder($placeholder));
+        $field = new Hidden($column, $arguments);
+        $this->addField($field);
+
+        return $field;
     }
 
     /**
@@ -231,7 +247,7 @@ class QuickCreate implements Renderable
 
     protected function script()
     {
-        $url = request()->url();
+        $url = $this->parent->resource();
 
         $script = <<<SCRIPT
 
