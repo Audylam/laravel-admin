@@ -59,6 +59,16 @@ class Panel implements Renderable
         ];
     }
 
+    public function addData($array)
+    {
+        $keys = array_keys($array);
+
+        foreach($keys as $key)
+        {
+            $this->data[$key] = $array[$key];
+        }
+    }
+
     /**
      * Set parent container.
      *
