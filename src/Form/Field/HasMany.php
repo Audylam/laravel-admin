@@ -638,6 +638,18 @@ EOT;
     }
 
     /**
+     * Disable Title/Label.
+     *
+     * @return $this
+     */
+    public function disableTitle()
+    {
+        $this->options['allowTitle'] = false;
+
+        return $this;
+    }
+
+    /**
      * Render the `HasMany` field.
      *
      * @throws \Exception
