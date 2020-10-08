@@ -1,5 +1,5 @@
 @foreach($js as $j)
-@if(strpos($j, "&") !== false)
+@if(strpos($j, "#") !== false)
 <?php 
     $js_attribute = explode('#', $j);
 
