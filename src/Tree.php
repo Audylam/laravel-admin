@@ -106,6 +106,14 @@ class Tree implements Renderable
     }
 
     /**
+     * Set Resource Path
+     */
+    public function setResourcePath($path)
+    {
+        $this->path = $path;
+    }
+
+    /**
      * Initialize branch callback.
      *
      * @return void
