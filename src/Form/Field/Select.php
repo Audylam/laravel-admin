@@ -140,7 +140,7 @@ $(document).on('change', "{$this->getElementClassSelector()}", function () {
             allowClear: $strAllowClear,
             data: $.map(data, function (d) {
                 d.id = d.$idField;
-                d.text = d.$textField;
+                d.text = (d.$textField).replace(/&nbsp;/g, String.fromCharCode(160));
                 return d;
             })
         });
