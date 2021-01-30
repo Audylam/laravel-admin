@@ -1,7 +1,9 @@
 
 <div class="row">
-    @if($options['allowTitle'])
-    <div class="{{$viewClass['label']}}"><h4 class="pull-right">{{ $label }}</h4></div>
+    @if(isset($options['allowTitle']))
+        @if($options['allowTitle'])
+            <div class="{{$viewClass['label']}}"><h4 class="pull-right">{{ $label }}</h4></div>
+        @endif
     @endif
     <div class="{{$viewClass['field']}}"></div>
 </div>
