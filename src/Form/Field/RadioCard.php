@@ -25,6 +25,8 @@ class RadioCard extends RadioButton
 
 .card-group .active {
     border: 2px solid #367fa9;
+    background-color: #367fa9;
+    color: white;
 }
 STYLE;
 
