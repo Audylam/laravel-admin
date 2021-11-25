@@ -6,7 +6,7 @@
 
 <div class="row">
     @if($options['allowTitle'])
-    <div class="{{$viewClass['label']}}"><h4 class="pull-right">{{ $label }}</h4></div>
+    <div class="{{$viewClass['label']}}"><h4 class="pull-right"><b>{{ $label }}</b></h4></div>
     @endif
     <div class="{{$viewClass['field']}}">
         <div id="has-many-{{$column}}" style="margin-top: 15px;">
