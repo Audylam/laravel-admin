@@ -65,6 +65,7 @@ class HasMany extends Field
     protected $options = [
         'allowCreate' => true,
         'allowDelete' => true,
+        'allowTitle' => true
     ];
 
     /**
